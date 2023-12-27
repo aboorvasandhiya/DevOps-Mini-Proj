@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+   <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href='../css/style.css'/>
+
+        <meta http-equiv="refresh" content="10;url=http://{{HOSTNAME}}">
+
+   </head>
+   <body>
+	  <h1>{{ title }}</h1>
+      <h2>Input Switch:  {{ button }}</h2>
+      <h2>Ultrasonic Sensor Distance:  {{ usonic_dist }}</h2>
+
+<table>
+  <tr>
+
+<table>
+  <tr>
+    <th>Actuator</th>
+    <th>Control</th>
+  </tr>
+  <tr>
+      <td>Light</td>
+    <td>
+        <form action="/action_page.php" method="get">
+            <button type="submit" formaction="/Light/off">Off</button>
+            <button type="submit" formaction="/Light/on">On</button>
+        </form>
+    </td>
+
+  </tr>
+  <tr>
+    <td>Ceiling Fan</td>
+    <td>
+        <form action="/action_page.php" method="get">
+            <button type="submit" formaction="/Ceiling Fan/off">Off</button>
+            <button type="submit" formaction="/Ceiling Fan/on">On</button>
+        </form>
+    </td>
+
+  </tr>
+
+  <tr>
+    <td>Door</td>
+    <td>
+        <form action="/action_page.php" method="get">
+            <button type="submit" formaction="/Door/off">Anti-Clockwise</button>
+            <button type="submit" formaction="/Door/on">Clockwise</button>
+        </form>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Sensors</td>
+    <td>
+        <form action="/action_page.php" method="get">
+            <button type="submit" formaction="/sensor/refresh">Read Sensors</button>
+        </form>
+    </td>
+  </tr>
+
+</table>
+
+
+
+   </body>
+</html>
